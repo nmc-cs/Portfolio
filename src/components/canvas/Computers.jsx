@@ -1,14 +1,16 @@
 import React from "react";
 import { Suspense, useEffect, useState } from "react";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
-import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
+import { Environment, OrbitControls, Preload, useGLTF } from "@react-three/drei";
 
 import CanvasLoader from "../Loader";
 
 const Computers = ({ isMobile }) => {
   //const computer = useGLTF("./computer_desk/scene.gltf");
   const computer = useGLTF("./public/gaming_desktop_pc/scene.gltf");
+  //const computer = useGLTF("./public/hologram_box/scene.gltf");
 
+   // COMPUTER_DESK
   // return (
   //   <mesh>
   //     {/* React-three-fiber docs & search "adding lights" for documentation */}
@@ -25,6 +27,7 @@ const Computers = ({ isMobile }) => {
   //   </mesh>
   // );
 
+// GAMING_DESKTOP_PC
   return (
     <mesh>
       {/* React-three-fiber docs & search "adding lights" for documentation */}
@@ -35,11 +38,28 @@ const Computers = ({ isMobile }) => {
       <primitive
         object={computer.scene}
         scale={isMobile ? 0.3 : 0.65}
-        position={isMobile ? [0, -3, -0.5] : [0, -3.25, -1.5]}
+        position={isMobile ? [0, -2, -0.5] : [0, -2.25, -1.5]}
         rotation={[0, -0.2, -0.1]}
       />
     </mesh>
   );
+
+// HOLOGRAM_BOX
+// return (
+//   <mesh>
+//     {/* React-three-fiber docs & search "adding lights" for documentation */}
+//     <hemisphereLight intensity={0.35} groundColor="black" />
+//     <pointLight intensity={1} position={[10, 10, 10]}/>
+//     <ambientLight intensity={0.5} />
+//     <directionalLight intensity={10} position={[5, 5, 5]} />
+//     <primitive
+//       object={computer.scene}
+//       scale={isMobile ? 0.3 : 9}
+//       position={isMobile ? [0, -3, -0.5] : [0, -2, 0]}
+//       rotation={[0, -0.2, -0.1]}
+//     />
+//   </mesh>
+// );
 };
 
 const ComputerCanvas = () => {
