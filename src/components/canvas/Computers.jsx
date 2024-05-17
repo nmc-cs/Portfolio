@@ -5,7 +5,6 @@ import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 
 import CanvasLoader from "../Loader";
 
-
 const Computers = ({ isMobile }) => {
   //const computer = useGLTF("./computer_desk/scene.gltf");
   const computer = useGLTF("./public/gaming_desktop_pc/scene.gltf");
@@ -41,24 +40,31 @@ const Computers = ({ isMobile }) => {
       />
     </mesh>
   );
-
 };
 
 const ComputerCanvas = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    const mediaQuery = window.matchMedia('(max-width: 500px)');
+    //adding a listener for the screen to change sizes
+    const mediaQuery = window.matchMedia("(max-width: 500px)");
+
+    //sets the initial value of the isMobile variable
     setIsMobile(mediaQuery.matches);
+
+    //defines a callback function to handle changes to the media query
     const handleMediaQueryChange = (event) => {
       setIsMobile(event.matches);
-    }
+    };
 
-    mediaQuery.addEventListener('change', handleMediaQueryChange);
+    //adds the callback function as a listener for changes to the media query
+    mediaQuery.addEventListener("change", handleMediaQueryChange);
+
+    //removes the listener when the component is unmounted
     return () => {
-      mediaQuery.removeEventListener('change', handleMediaQueryChange);
-    }
-  }, [])
+      mediaQuery.removeEventListener("change", handleMediaQueryChange);
+    };
+  }, []);
 
   return (
     <Canvas
@@ -79,7 +85,5 @@ const ComputerCanvas = () => {
     </Canvas>
   );
 };
-
-
 
 export default ComputerCanvas;

@@ -9,6 +9,31 @@ import { logo, menu, close } from '../assets';
 const Navbar = () => {
   const [active, setActive] = useState(" ")
   const [toggle, setToggle] = useState(false);
+  const [currentDateTime, setCurrentDateTime] = useState("");
+
+  const formatDateTime = () => {
+    const now = new Date();
+    const options = {
+      weekday: 'short',
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric',
+      hour: 'numeric',
+      minute: 'numeric',
+      second: 'numeric'
+    };
+    return now.toLocaleDateString('en-US', options);
+  };
+
+  useEffect(() => {
+    const updateDateTime = () => {
+      setCurrentDateTime(formatDateTime());
+    };
+    updateDateTime();
+    const timer = setInterval(updateDateTime, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
 
   return (
     <nav
@@ -27,7 +52,7 @@ const Navbar = () => {
           <img src={logo} alt="logo" className='w-9 h-9 object-contain' />
           <p className='text-white text-[18px] font-bold cursor-pointer flex'>
             Nitin M. Chava &nbsp;
-            <span className='sm:block hidden'>| Developer </span>
+            <span className='sm:block hidden'> | {currentDateTime} </span>
             </p>
         </Link>
         <ul className='list-non hidden sm:flex flex-row gap-10'>
