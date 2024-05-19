@@ -1,9 +1,62 @@
-import React from 'react'
+import React from "react";
+import { Tilt } from "react-tilt";
+import { motion } from "framer-motion";
+import { style } from "../style";
+import { github } from "../assets";
+import { SectionWrapper } from "../HOC";
+import { projects } from "../constants";
+import { fadeIn, textVariant } from "../utils/motion";
 
-const Works = () => {
+const ProjectCard = ({ index, name, description, tags, image, source_code_link, }) => {
   return (
-    <div>Works</div>
+    <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
+      <Tilt
+        options={{
+          max: 45,
+          scale: 1,
+          speed: 450,
+        }}
+        className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
+      >
+
+      </Tilt>
+    </motion.div>
   )
 }
 
-export default Works
+const Works = () => {
+  return (
+    <>
+      <motion.div variants={textVariant()}>
+        <p className={style.sectionSubText}>My Work</p>
+        <h2 className={style.sectionHeadText}>Projects.</h2>
+      </motion.div>
+      <div className="w-full flex">
+        <motion.p
+          variants={fadeIn("", "", 0.1, 1)}
+          className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]"
+        >
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+          consequatur. Quo incidunt nulla quod cupiditate consequuntur
+          laudantium sint dolor doloribus placeat! Sequi accusamus modi ex
+          molestias nam in unde dolor? Lorem ipsum dolor sit amet consectetur,
+          adipisicing elit. Numquam, iste nihil culpa voluptate quas sapiente
+          dolore unde facilis voluptates alias, autem, eos harum! Quisquam
+          laudantium vero illum, enim reprehenderit saepe.
+        </motion.p>
+      </div>
+
+      <div className="mt-20 flex flex-wrap gap-7">
+        {projects.map((project, index) => (
+          <ProjectCard
+            key={`project-${index}`}
+            index={index}
+            {...project}
+          />
+        ))}
+      </div>
+    </>
+  );
+};
+
+export default SectionWrapper(Works, "");
