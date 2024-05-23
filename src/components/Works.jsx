@@ -6,6 +6,7 @@ import { github } from "../assets";
 import { SectionWrapper } from "../HOC";
 import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
+import StartCanvas from "./canvas/Stars";
 
 const ProjectCard = ({
   index,
