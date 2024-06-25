@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 
 import { style } from '../style/'
 import { ComputersCanvas } from './canvas';
+import StarsCanvas from './StarBackground';
 
 const Hero = () => {
   return (
@@ -18,7 +19,7 @@ const Hero = () => {
         </p>
       </div>
       </div>
-      <ComputersCanvas />
+      <StarsCanvas />
 
       <div className='absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center'>
         <a href="#about">
