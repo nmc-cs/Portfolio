@@ -43,7 +43,7 @@ const Navbar = () => {
           <img src={logo} alt="logo" className='w-9 h-9 object-contain' />
           <p className='text-white text-[18px] font-bold cursor-pointer flex'>
             Nitin M. Chava &nbsp;
-            <span className='sm:block hidden'> | {currentDate} </span>
+            <span className='sm:block hidden'></span>
             </p>
         </Link>
         <ul className='list-non hidden sm:flex flex-row gap-10'>
