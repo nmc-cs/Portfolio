@@ -12,7 +12,7 @@ import {
   StarsCanvas,
 } from './components';
 
-import backgroundImage from './assets/background1.jpg';
+import backgroundImage from './assets/background2.jpg';
 
 const App = () => {
   return (
