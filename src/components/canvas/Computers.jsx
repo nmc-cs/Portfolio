@@ -16,7 +16,7 @@ const Computers = ({ isMobile }) => {
   return (
     <mesh>
       {/* React-three-fiber docs & search "adding lights" for documentation */}
-      <hemisphereLight intensity={0.01} groundColor="black" />
+      <hemisphereLight intensity={2} groundColor="black" />
       <pointLight intensity={20} />
       <ambientLight intensity={0.1} />
       <directionalLight color="red" position={[10, 10, 0]} />
