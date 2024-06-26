@@ -6,82 +6,44 @@ import { Environment, OrbitControls, Preload, useGLTF } from "@react-three/drei"
 import CanvasLoader from "../Loader";
 
 const Computers = ({ isMobile }) => {
-  //const computer = useGLTF("./computer_desk/scene.gltf");
-  //const computer = useGLTF("./public/gaming_desktop_pc/scene.gltf");
-  //const computer = useGLTF("./public/hologram_box/scene.gltf");
+  if(isMobile){
+    return null;
+  }
+
   const computer = useGLTF("./public/space_kid/scene.gltf");
+  const ship = useGLTF("./public/cartoon_spaceship/scene.gltf");
 
-   // COMPUTER_DESK
-  // return (
-  //   <mesh>
-  //     {/* React-three-fiber docs & search "adding lights" for documentation */}
-  //     <hemisphereLight intensity={0} groundColor="black" />
-  //     <pointLight intensity={10} />
-  //     <ambientLight intensity={1} />
-  //     <directionalLight color="violet" position={[10, 10, 0]} />
-  //     <primitive
-  //       object={computer.scene}
-  //       scale={3}
-  //       position={[0, -4.25, -1.5]}
-  //       rotation={[-0.2, 0, 0]}
-  //     />
-  //   </mesh>
-  // );
-
-// GAMING_DESKTOP_PC
-  // return (
-  //   <mesh>
-  //     {/* React-three-fiber docs & search "adding lights" for documentation */}
-  //     <hemisphereLight intensity={0.01} groundColor="black" />
-  //     <pointLight intensity={20} />
-  //     <ambientLight intensity={0.1} />
-  //     <directionalLight color="blue" position={[10, 10, 0]} />
-  //     <primitive
-  //       object={computer.scene}
-  //       scale={isMobile ? 0.3 : 0.65}
-  //       // original position
-  //       position={isMobile ? [0, -2, -0.5] : [0, -3.25, -1.5]}
-  //       //testing
-  //       rotation={[0, -0.2, -0.1]}
-  //     />
-  //   </mesh>
-  // );
-
-  // space_kid
   return (
     <mesh>
       {/* React-three-fiber docs & search "adding lights" for documentation */}
-      <hemisphereLight intensity={1} groundColor="black" />
+      <hemisphereLight intensity={0.01} groundColor="black" />
+      <pointLight intensity={20} />
+      <ambientLight intensity={0.1} />
+      <directionalLight color="red" position={[10, 10, 0]} />
+      <primitive
+        object={ship.scene}
+        scale={isMobile ? 0.3 : 1.1}
+        // original position
+        position={isMobile ? [0, -2, -0.5] : [1, -3.25, -1.5]}
+        //testing
+        rotation={[0, -0.2, -0.1]}
+      />
+          <mesh>
+      <hemisphereLight intensity={2} groundColor="black" />
       <pointLight intensity={30} />
       <ambientLight intensity={1} />
       <directionalLight color="red" position={[5, 5, 5]} />
       <primitive
         object={computer.scene}
-        scale={isMobile ? 0.3 : 0.65}
+        scale={isMobile ? 0.3 : 0.55}
         // original position
         position={isMobile ? [0, -2, -0.5] : [9.2, 0.61, -1.99]}
         //testing
         rotation={[0, 1, -0.1]}
       />
     </mesh>
+    </mesh>
   );
-
-// HOLOGRAM_BOX
-// return (
-//   <mesh>
-//     {/* React-three-fiber docs & search "adding lights" for documentation */}
-//     <hemisphereLight intensity={0.35} groundColor="black" />
-//     <pointLight intensity={1} position={[10, 10, 10]}/>
-//     <ambientLight intensity={0.5} />
-//     <directionalLight intensity={10} position={[5, 5, 5]} />
-//     <primitive
-//       object={computer.scene}
-//       scale={isMobile ? 0.3 : 9}
-//       position={isMobile ? [0, -3, -0.5] : [0, -2, 0]}
-//       rotation={[0, -0.2, -0.1]}
-//     />
-//   </mesh>
-// );
 };
 
 const ComputerCanvas = () => {
@@ -116,10 +78,11 @@ const ComputerCanvas = () => {
       gl={{ preserveDrawingBuffer: true }}
     >
       <Suspense fallback={<CanvasLoader />}>
+      {/* Removed due to complexity */}
         {/* <OrbitControls
           enableZoom={false}
-          maxPolarAngle={Math.PI / 2}
-          minPolarAngle={Math.PI / 2}
+          maxPolarAngle={Math.PI}  // Adjust as needed for your scene
+          minPolarAngle={0}  // Adjust as needed for your scene
         /> */}
         <Computers isMobile={isMobile} />
       </Suspense>
