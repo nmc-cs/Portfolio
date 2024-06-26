@@ -7,8 +7,9 @@ import CanvasLoader from "../Loader";
 
 const Computers = ({ isMobile }) => {
   //const computer = useGLTF("./computer_desk/scene.gltf");
-  const computer = useGLTF("./public/gaming_desktop_pc/scene.gltf");
+  //const computer = useGLTF("./public/gaming_desktop_pc/scene.gltf");
   //const computer = useGLTF("./public/hologram_box/scene.gltf");
+  const computer = useGLTF("./public/space_kid/scene.gltf");
 
    // COMPUTER_DESK
   // return (
@@ -28,18 +29,39 @@ const Computers = ({ isMobile }) => {
   // );
 
 // GAMING_DESKTOP_PC
+  // return (
+  //   <mesh>
+  //     {/* React-three-fiber docs & search "adding lights" for documentation */}
+  //     <hemisphereLight intensity={0.01} groundColor="black" />
+  //     <pointLight intensity={20} />
+  //     <ambientLight intensity={0.1} />
+  //     <directionalLight color="blue" position={[10, 10, 0]} />
+  //     <primitive
+  //       object={computer.scene}
+  //       scale={isMobile ? 0.3 : 0.65}
+  //       // original position
+  //       position={isMobile ? [0, -2, -0.5] : [0, -3.25, -1.5]}
+  //       //testing
+  //       rotation={[0, -0.2, -0.1]}
+  //     />
+  //   </mesh>
+  // );
+
+  // space_kid
   return (
     <mesh>
       {/* React-three-fiber docs & search "adding lights" for documentation */}
-      <hemisphereLight intensity={0.01} groundColor="black" />
-      <pointLight intensity={20} />
-      <ambientLight intensity={0.1} />
-      <directionalLight color="blue" position={[10, 10, 0]} />
+      <hemisphereLight intensity={1} groundColor="black" />
+      <pointLight intensity={30} />
+      <ambientLight intensity={1} />
+      <directionalLight color="red" position={[5, 5, 5]} />
       <primitive
         object={computer.scene}
         scale={isMobile ? 0.3 : 0.65}
-        position={isMobile ? [0, -2, -0.5] : [0, -2.25, -1.5]}
-        rotation={[0, -0.2, -0.1]}
+        // original position
+        position={isMobile ? [0, -2, -0.5] : [9.2, 0.61, -1.99]}
+        //testing
+        rotation={[0, 1, -0.1]}
       />
     </mesh>
   );
@@ -90,15 +112,15 @@ const ComputerCanvas = () => {
     <Canvas
       frameloop="demand"
       shadows
-      camera={{ position: [20, 3, 5], fov: 25 }}
+      camera={{ position: [25, 3, 5], fov: 17 }}
       gl={{ preserveDrawingBuffer: true }}
     >
       <Suspense fallback={<CanvasLoader />}>
-        <OrbitControls
+        {/* <OrbitControls
           enableZoom={false}
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
-        />
+        /> */}
         <Computers isMobile={isMobile} />
       </Suspense>
       <Preload all />

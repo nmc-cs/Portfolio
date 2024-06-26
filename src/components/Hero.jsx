@@ -6,6 +6,7 @@ import { style } from "../style/";
 import { ComputersCanvas } from "./canvas";
 import StarsCanvas from "./StarBackground";
 import "/Users/nitinchava/Documents/Vs.Code_Projects/Portfolio/src/index.css";
+import ComputerCanvas from "./canvas/Computers";
 
 const Hero = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -87,6 +88,7 @@ const Hero = () => {
         </div>
       </div>
       <StarsCanvas />
+      {/* <ComputerCanvas /> */}
       <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
         <a href="#about">
           <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
