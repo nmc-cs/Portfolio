@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { FaLinkedin, FaGithub, FaInstagram, FaTwitter } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaInstagram, FaTwitter, FaDownload } from "react-icons/fa";
 
 import { style } from "../style/";
 import { ComputersCanvas } from "./canvas";
@@ -23,7 +23,7 @@ const Hero = () => {
   return (
     <section className="relative w-full h-screen mx-auto">
       <div
-        className={`${style.paddingX} absolute inset-0 top-[135px] max-w-7xl mx-auto flex flex-row items-start gap-5`}
+        className={`${style.paddingX} absolute inset-0 top-[135px] max-w-7xl mx-auto flex flex-row items-start gap-5 z-10`}
       >
         <div className="flex flex-col justify-center items-center mt-5">
           <div className="w-5 h-5 rounded-full bg-[#BA3B2A]" />
@@ -50,7 +50,7 @@ const Hero = () => {
               </motion.span>
             </span>
           </p>
-          <div className="social-icons-container" style={{ marginTop: "40px" }}>
+          <div className="social-icons-container" style={{ marginTop: "30px" }}>
             <a
               href="https://www.linkedin.com/in/nmc03/"
               target="_blank"
@@ -85,6 +85,19 @@ const Hero = () => {
               <FaTwitter size={28} />
             </a>
           </div>
+          <div className="download-cv-container" style={{ marginTop: '30px' }}>
+            <a
+              //href="https://drive.google.com/uc?export=download&id=1JoPLy_Vl9woRwT3G08YTSLz_z6Eimi6P"
+              href="https://drive.google.com/file/d/1m8C6ToLF0FP5KrB8PK0pFIOoswkbpxyu/view"
+              target="_blank"
+              download="Nitin_Chava_CV.pdf"
+              rel="noopener noreferrer"
+              className="download-cv-button"
+          >
+              <FaDownload size={20} style={{ marginRight: '8px' }} />
+              Download CV
+            </a>
+          </div>
         </div>
       </div>
       <StarsCanvas />
@@ -107,5 +120,4 @@ const Hero = () => {
     </section>
   );
 };
-
 export default Hero;

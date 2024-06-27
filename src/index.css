@@ -232,3 +232,35 @@
   position: relative;
   z-index: 10;
 }
+.download-cv-container {
+  margin-top: 20px;
+}
+
+.download-cv-button {
+  display: inline-flex;
+  align-items: center;
+  background-color: #BA3B2A;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  font-weight: 500;
+  z-index: 10;
+}
+
+.download-cv-button:hover {
+  background-color: #9e3224;
+  transform: translateY(-3px);
+}
+
+.download-cv-button svg {
+  margin-right: 8px;
+}
+
+@media (max-width: 640px) {
+  .download-cv-container {
+    display: flex;
+    justify-content: center;
+  }
+}
