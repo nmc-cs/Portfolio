@@ -16,7 +16,7 @@ const Computers = ({ isMobile }) => {
   return (
     <mesh>
       {/* React-three-fiber docs & search "adding lights" for documentation */}
-      <hemisphereLight intensity={2} groundColor="black" />
+      <hemisphereLight intensity={1} groundColor="black" />
       <pointLight intensity={20} />
       <ambientLight intensity={0.1} />
       <directionalLight color="red" position={[10, 10, 0]} />
@@ -37,7 +37,7 @@ const Computers = ({ isMobile }) => {
         object={computer.scene}
         scale={isMobile ? 0.3 : 0.55}
         // original position
-        position={isMobile ? [0, -2, -0.5] : [9.2, 0.61, -1.99]}
+        position={isMobile ? [0, -2, -0.5] : [9.2, 0.66, -1.99]}
         //testing
         rotation={[0, 1, -0.1]}
       />
