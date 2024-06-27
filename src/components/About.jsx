@@ -11,13 +11,13 @@ const TAB_DATA = [
     title: "Skills",
     id: "skills",
     content: (
-      <ul className="list-disc pl-24">
-        <li>Node.js</li>
-        <li>Express</li>
-        <li>PostgreSQL</li>
-        <li>Sequelize</li>
-        <li>JavaScript</li>
-        <li>React</li>
+      <ul className="grid grid-cols-2 gap-4 text-[15px]">
+        <li className="flex items-center"><span className="mr-2 text-[#BA3B2A]">▹</span>C/C++</li>
+        <li className="flex items-center"><span className="mr-2 text-[#BA3B2A]">▹</span>Python</li>
+        <li className="flex items-center"><span className="mr-2 text-[#BA3B2A]">▹</span>JS/React</li>
+        <li className="flex items-center"><span className="mr-2 text-[#BA3B2A]">▹</span>Java</li>
+        <li className="flex items-center"><span className="mr-2 text-[#BA3B2A]">▹</span>Docker/K8s</li>
+        <li className="flex items-center"><span className="mr-2 text-[#BA3B2A]">▹</span>AWS</li>
       </ul>
     ),
   },
@@ -25,9 +25,15 @@ const TAB_DATA = [
     title: "Education",
     id: "education",
     content: (
-      <ul className="list-disc pl-24">
-        <li>Marquette Senior High School</li>
-        <li>University of Missouri, Columbia</li>
+      <ul className="space-y-4 text-[15px]">
+        <li className="flex flex-col">
+          <span className="font-semibold">Marquette Senior High School</span>
+          <span className="text-[#BA3B2A]">High School Diploma | 2019 - 2022</span>
+        </li>
+        <li className="flex flex-col">
+          <span className="font-semibold">University of Missouri, Columbia</span>
+          <span className="text-[#BA3B2A]">BS in Computer Science, Certificate in Cyber Security | 2022 - 2025</span>
+        </li>
       </ul>
     ),
   },
@@ -35,10 +41,12 @@ const TAB_DATA = [
     title: "Certifications",
     id: "certifications",
     content: (
-      <ul className="list-disc pl-24">
-        <li>AWS Cloud Practitioner</li>
-        <li>Coming Soon</li>
-        <li>Coming Soon</li>
+      <ul className="space-y-4 text-[15px]">
+        <li className="flex items-center"><span className="mr-2 text-[#BA3B2A]">▹</span>AWS Cloud Practitioner</li>
+        <span className="text-[#BA3B2A] ml-4">2023 - 2026</span>
+        <li className="flex items-center"><span className="mr-2 text-[#BA3B2A]">▹</span>J.P. Morgan - SWE Job Simulation</li>
+        <span className="text-[#BA3B2A] ml-4">2023</span>
+        <li className="flex items-center"><span className="mr-2 text-[#BA3B2A]">▹</span>Coming Soon</li>
       </ul>
     ),
   },
@@ -66,43 +74,26 @@ const About = () => {
             variants={fadeIn("", "", 0.1, 1)}
             className="mt-4 text-white text-[17px] max-w-3xl leading-[30px]"
           >
-            I'm a problem solver who enjoys connecting with people from all walks of
-            life. Currently, I'm a student at the University of Missouri-Columbia,
-            where I'm studying Computer Science, Business, and Mathematics. I have a
-            keen interest in technology, especially topics like machine learning and
-            artificial intelligence. Looking ahead, I'm excited about the prospect of
-            pursuing a career in software engineering. Beyond my academic and career
-            goals, I have a range of interests that keep me engaged. Staying active is
-            important to me, and I find joy in working out and playing tennis. Reading
-            is another passion of mine, and I'm always eager to explore new books across
-            different genres. Recently, I've discovered a new passion... investing. I'm
-            enthusiastic about exploring the world of finance and understanding how
-            markets work. It's an exciting journey, and I'm eager to learn more and
-            explore new investment opportunities.
+            I was born in India and came to United States at the age of four and have been in St. Louis, MO since.
+            I am currently a Junior studying Computer Science at The University of Missouri, Columbia.
+            I consider myself as a leader, problem-solver, and a learner who is dedicated to seek out opportunities
+            that make an impact on our world. Thats enough of the cliche message. Apart from academics, I play tennis
+            on the club team at Mizzou, I love adventure, cooking, and reading.
           </motion.p>
         </div>
         <div className="md:col-span-1 flex flex-col justify-start mt-8 md:mt-0 md:pl-16">
           <motion.div className="flex flex-row justify-start md:justify-center mt-32" variants={fadeIn("", "", 0.1, 1)}>
-            <TabButton
-              selectTab={() => handleTabChange("skills")}
-              active={tab === "skills"}
-            >
-              Skills
-            </TabButton>
-            <TabButton
-              selectTab={() => handleTabChange("education")}
-              active={tab === "education"}
-            >
-              Education
-            </TabButton>
-            <TabButton
-              selectTab={() => handleTabChange("certifications")}
-              active={tab === "certifications"}
-            >
-              Certifications
-            </TabButton>
+            {TAB_DATA.map((tabItem) => (
+              <TabButton
+                key={tabItem.id}
+                selectTab={() => handleTabChange(tabItem.id)}
+                active={tab === tabItem.id}
+              >
+                {tabItem.title}
+              </TabButton>
+            ))}
           </motion.div>
-          <motion.div className="mt-5" variants={fadeIn("", "", 0.2, 1)}>
+          <motion.div className="mt-8 bg-[#241f3771] p-6 rounded-lg" variants={fadeIn("", "", 0.2, 1)}>
             {TAB_DATA.find((t) => t.id === tab).content}
           </motion.div>
         </div>

@@ -264,3 +264,22 @@
     justify-content: center;
   }
 }
+.tab-button {
+  color: white;
+  transition: color 0.3s ease-in-out;
+}
+
+.tab-button:hover {
+  color: #BA3B2A;
+}
+.experience-title {
+  transition: color 0.3s ease-in-out;
+}
+
+.experience-card:hover .experience-title {
+  color: #BA3B2A;
+}
+whileHover={{
+  backgroundColor: "#BA3B2A",
+  transition: { duration: 0.3 }
+}}

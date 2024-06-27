@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 import { style } from "../style";
 import { navLinks } from "../constants";
@@ -9,6 +10,7 @@ const Navbar = () => {
   const [active, setActive] = useState(" ");
   const [toggle, setToggle] = useState(false);
   const [currentDate, setCurrentDate] = useState("");
+  const [scrolled, setScrolled] = useState(false);
 
   const formatDate = () => {
     const now = new Date();
@@ -24,8 +26,6 @@ const Navbar = () => {
   useEffect(() => {
     setCurrentDate(formatDate());
   }, []);
-
-  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -44,11 +44,11 @@ const Navbar = () => {
 
   return (
     <nav
-    className={`
-      ${style.paddingX} w-full flex items-center py-5 fixed top-0 left-0 right-0 z-20
-      transition-all duration-300
-      ${scrolled ? 'bg-primary shadow-lg' : 'bg-transparent'}
-    `}
+      className={`
+        ${style.paddingX} w-full flex items-center py-5 fixed top-0 left-0 right-0 z-20
+        transition-all duration-300
+        ${scrolled ? 'bg-primary shadow-lg' : 'bg-transparent'}
+      `}
     >
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
         <Link
@@ -65,17 +65,33 @@ const Navbar = () => {
             <span className="sm:block hidden"></span>
           </p>
         </Link>
-        <ul className="list-non hidden sm:flex flex-row gap-10">
+        <ul className="list-none hidden sm:flex flex-row gap-10">
           {navLinks.map((link) => (
-            <li
+            <motion.li
               key={link.id}
               className={`${
                 active === link.title ? "text-white" : "text-white"
-              } hover:text-[#BA3B2A] text-[18px] font-medium cursor-pointer`}
+              } text-[18px] font-medium cursor-pointer`}
               onClick={() => setActive(link.title)}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
             >
-              <a href={`#${link.id}`}>{link.title}</a>
-            </li>
+              <motion.a
+                href={`#${link.id}`}
+                className="relative"
+                initial={{ color: "#FFFFFF" }}
+                whileHover={{ color: "#BA3B2A" }}
+                transition={{ duration: 0.3 }}
+              >
+                {link.title}
+                <motion.span
+                  className="absolute bottom-0 left-0 w-full h-0.5 bg-[#BA3B2A]"
+                  initial={{ scaleX: 0 }}
+                  whileHover={{ scaleX: 1 }}
+                  transition={{ duration: 0.3 }}
+                />
+              </motion.a>
+            </motion.li>
           ))}
         </ul>
         <div className="sm:hidden flex flex-1 justify-end items-center">
@@ -88,11 +104,11 @@ const Navbar = () => {
           <div
             className={`${
               !toggle ? "hidden" : "flex"
-            } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w[140px] z-10 rounded-xl`}
+            } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
           >
-            <ul className="list-non flex justify-end items-start flex-col gap-4">
+            <ul className="list-none flex justify-end items-start flex-col gap-4">
               {navLinks.map((link) => (
-                <li
+                <motion.li
                   key={link.id}
                   className={`${
                     active === link.title ? "text-white" : "text-secondary"
@@ -101,9 +117,18 @@ const Navbar = () => {
                     setToggle(!toggle);
                     setActive(link.title);
                   }}
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.95 }}
                 >
-                  <a href={`#${link.id}`}>{link.title}</a>
-                </li>
+                  <motion.a
+                    href={`#${link.id}`}
+                    initial={{ color: "#FFFFFF" }}
+                    whileHover={{ color: "#BA3B2A" }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    {link.title}
+                  </motion.a>
+                </motion.li>
               ))}
             </ul>
           </div>

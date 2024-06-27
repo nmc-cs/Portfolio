@@ -18,7 +18,6 @@ const Contact = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-
     setForm({ ...form, [name]: value });
   };
 
@@ -66,6 +65,7 @@ const Contact = () => {
       >
         <p className={style.sectionSubText}>Get in touch</p>
         <h3 className={style.sectionHeadText}>Contact.</h3>
+
         <form
           ref={formRef}
           onSubmit={handleSubmit}
@@ -87,7 +87,7 @@ const Contact = () => {
             <input
               type="email"
               name="email"
-              value={form.name}
+              value={form.email}
               onChange={handleChange}
               placeholder="What's your email?"
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium"
@@ -100,16 +100,20 @@ const Contact = () => {
               name="message"
               value={form.message}
               onChange={handleChange}
-              placeholder="What would you like to say?"
+              placeholder="What do you want to say?"
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium"
             />
           </label>
-          <button
+          <motion.button
             type="submit"
-            className="bg-tertiary py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl hover:bg-[#BA3B2A]"
+            className="bg-tertiary py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl"
+            whileHover={{
+              backgroundColor: "#BA3B2A",
+              transition: { duration: 0.3 },
+            }}
           >
             {loading ? "Sending..." : "Send"}
-          </button>
+          </motion.button>
         </form>
       </motion.div>
       <motion.div
