@@ -42,6 +42,12 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const updatedNavLinks = [
+    ...navLinks.slice(0, 2),
+    { id: "projects", title: "Projects" },
+    ...navLinks.slice(2)
+  ];
+
   return (
     <nav
       className={`
@@ -66,7 +72,7 @@ const Navbar = () => {
           </p>
         </Link>
         <ul className="list-none hidden sm:flex flex-row gap-10">
-          {navLinks.map((link) => (
+          {updatedNavLinks.map((link) => (
             <motion.li
               key={link.id}
               className={`${
@@ -107,7 +113,7 @@ const Navbar = () => {
             } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
           >
             <ul className="list-none flex justify-end items-start flex-col gap-4">
-              {navLinks.map((link) => (
+              {updatedNavLinks.map((link) => (
                 <motion.li
                   key={link.id}
                   className={`${
