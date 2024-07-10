@@ -122,10 +122,10 @@ const experiences = [
     iconBg: "#FFFFFF",
     date: "May 2024 - Present",
     points: [
-      "Coming Soon",
-      "Coming Soon",
-      "Coming Soon",
-      "Coming Soon",
+      "Created a comprehensive Dell EMC Data Domain Lab guide, enabling over 100 employees to navigate setup intricacies on virtual server sandboxes for client projects.",
+      "Published educational articles on BOPLA, enhancing understanding and best practices among peers.",
+      "Contributed insights and guides on AWS integration with Rubrik, facilitating streamlined cloud backup and data management solutions.",
+      "Demonstrated proficiency in technical writing and documentation to support knowledge sharing and operational efficiency within the organization.",
     ],
   },
   {
@@ -135,10 +135,10 @@ const experiences = [
     iconBg: "#FFFFFF",
     date: "Dec 2023 - Present",
     points: [
-      "Established a local dev environment by creating and identifiying essential files, tools and dependencies.",
-      "Analyzed and fixed broken files in repository resulting in a fully functional web application providing accurate output.",
-      "Utilized JPMorgan Chase's open-source library, Perspective, to create a live graph to enhance user experience.",
-      "Implemented the live graph to display real-time feeds catered towards traders for potential opportunities.",
+      "Developed containerized deployments of MonoDepth2 for local environments and integration with Jupyter notebooks.",
+      "Implemented Docker and Kubernetes solutions for scalable and efficient deployment of deep learning models.",
+      "Acquired extensive knowledge of AWS services for cloud-based infrastructure and deployment strategies.",
+      "Engaged in continuous learning and experimentation to optimize performance and scalability in computational tasks.",
     ],
   },
   {
