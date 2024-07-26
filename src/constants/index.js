@@ -88,8 +88,7 @@ const technologies = [
     name: "MySQL",
     icon: mongodb,
   },
-  {
-    name: "AWS",
+  {    name: "AWS",
     icon: figma,
   },
   {
