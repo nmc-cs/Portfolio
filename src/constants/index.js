@@ -211,7 +211,7 @@ const projects = [
   {
     name: "Portfolio",
     description:
-      "This Page! A personal website of mine to showcase my accomplishments. Uses Framer Motion for a smooth animated experience and interactive 3D elements with Three.js and React Three Fiber with email functionality. ",
+      "This Page! A personal website of mine to showcase my accomplishments. Uses Framer Motion for a smooth animated experience and interactive 3D elements with Three.js and React Three Fiber all deployed on AWS cloud.",
     tags: [
       {
         name: "React",
@@ -236,15 +236,15 @@ const projects = [
   {
     name: "Trip Guide",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "A group Pacman simulation game featuring all the same features of the original game but with our own fun, unique integration of sounds and gameplay. Follows all OOP principles and design patterns such as Singleton and Factory.",
     tags: [
       {
-        name: "nextjs",
+        name: "Java",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
-        color: "green-text-gradient",
+        name: "Javascript",
+        color: "orange-text-gradient",
       },
       {
         name: "css",
