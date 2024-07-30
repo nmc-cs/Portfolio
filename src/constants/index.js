@@ -121,10 +121,11 @@ const experiences = [
     iconBg: "#FFFFFF",
     date: "May 2024 - Present",
     points: [
-      "Created a comprehensive Dell EMC Data Domain Lab guide, enabling over 100 employees to navigate setup intricacies on virtual server sandboxes for client projects.",
-      "Published educational articles on BOPLA, enhancing understanding and best practices among peers.",
-      "Contributed insights and guides on AWS integration with Rubrik, facilitating streamlined cloud backup and data management solutions.",
-      "Demonstrated proficiency in technical writing and documentation to support knowledge sharing and operational efficiency within the organization.",
+      "Developed a Dell EMC Data Domain Lab guide for CommVault using detailed API documentation and virtual server sandboxes, enabling 100+ employees to navigate setup intricacies for client projects, enhancing technical and project efficiency.",
+      "Published articles on BOPLA, leveraging RESTful APIs and best practices to help understanding and technical expertise for employees",
+      "Utilized AWS Lambda, S3, EC2, and IAM for streamlined cloud backup and data management solutions using Rubrik RSC.",
+      "Automated certificate email distribution for users with Ansible Notebook, created Python Docstrings for WWT Instruqt toolkit, implemented GitHub Pages and a CICD pipeline for efficient documentation updates, and validated and tested code to ensure reliability and effectiveness.",
+      "Integrated CICD pipelines, managed pull requests, conducted code reviews, performed load/stress/unit/integration testing."
     ],
   },
   {
