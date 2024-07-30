@@ -86,13 +86,13 @@ const Works = () => {
           variants={fadeIn("", "", 0.1, 1)}
           className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]"
         >
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
-          consequatur. Quo incidunt nulla quod cupiditate consequuntur
-          laudantium sint dolor doloribus placeat! Sequi accusamus modi ex
-          molestias nam in unde dolor? Lorem ipsum dolor sit amet consectetur,
-          adipisicing elit. Numquam, iste nihil culpa voluptate quas sapiente
-          dolore unde facilis voluptates alias, autem, eos harum! Quisquam
-          laudantium vero illum, enim reprehenderit saepe.
+          My coding projects are crafted to solve real-world challenges and enhance my technical expertise.
+          Each project is designed to address a specific problem in my life, understand new technologies,
+          or work with others to better my collaborative skills. While I don't have all my projects listed here,
+          feel free to browse through my repositories on GitHub to see a wide range of solutions. I'm always open to discussions,
+          questions, and collaboration opportunities. If you find something intriguing or have and cool idea, don't
+          hesitate to reach out!
+
         </motion.p>
       </div>
 

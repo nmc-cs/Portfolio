@@ -5,7 +5,7 @@ import { FaLinkedin, FaGithub, FaInstagram, FaTwitter, FaDownload } from "react-
 import { style } from "../style/";
 import { ComputersCanvas } from "./canvas";
 import StarsCanvas from "./StarBackground";
-import "/Users/nitinchava/Documents/Vs.Code_Projects/Portfolio/src/index.css";
+import "../index.css";
 import ComputerCanvas from "./canvas/Computers";
 
 const Hero = () => {

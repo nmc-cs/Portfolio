@@ -235,7 +235,7 @@ const projects = [
     source_code_link: "https://github.com/nmc-cs/Portfolio",
   },
   {
-    name: "Trip Guide",
+    name: "Puck-Man",
     description:
       "A group Pacman simulation game featuring all the same features of the original game but with our own fun, unique integration of sounds and gameplay. Follows all OOP principles and design patterns such as Singleton and Factory.",
     tags: [
