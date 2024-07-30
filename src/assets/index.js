@@ -27,7 +27,7 @@ import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
 
 import carrent from "./carrent.mp4";
-import jobit from "./jobit.png";
+import jobit from "./jobit.mp4";
 import tripguide from "./tripguide.png";
 
 export {
