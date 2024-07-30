@@ -209,25 +209,29 @@ const projects = [
     source_code_link: "https://github.com/nmc-cs/Tennis-Analyzer",
   },
   {
-    name: "Job IT",
+    name: "Portfolio",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "This Page! A personal website of mine to showcase my accomplishments. Uses Framer Motion for a smooth animated experience and interactive 3D elements with Three.js and React Three Fiber with email functionality. ",
     tags: [
       {
-        name: "react",
+        name: "React",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
+        name: "Vite",
         color: "green-text-gradient",
       },
       {
-        name: "scss",
+        name: "Tailwind CSS",
         color: "pink-text-gradient",
       },
+      {
+        name: "Javascript",
+        color: "orange-text-gradient"
+      }
     ],
     image: jobit,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/nmc-cs/Portfolio",
   },
   {
     name: "Trip Guide",
