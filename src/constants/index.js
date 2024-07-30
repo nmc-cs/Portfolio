@@ -133,12 +133,12 @@ const experiences = [
     company_name: "University of Missouri, Columbia",
     icon: tesla,
     iconBg: "#FFFFFF",
-    date: "Dec 2023 - Present",
+    date: "Dec 2023 - May 2024",
     points: [
       "Developed containerized deployments of MonoDepth2 for local environments and integration with Jupyter notebooks.",
       "Implemented Docker and Kubernetes solutions for scalable and efficient deployment of deep learning models.",
-      "Acquired extensive knowledge of AWS services for cloud-based infrastructure and deployment strategies.",
-      "Engaged in continuous learning and experimentation to optimize performance and scalability in computational tasks.",
+      "Utilized AWS services like EC2, S3, and Lambda, to design and manage cloud-based infrastructure and deployment strategies.",
+      "Deployed multiple full-stack web projects using containers and AWS, leveraging services such as ECS and RDS.",
     ],
   },
   {
