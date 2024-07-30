@@ -28,7 +28,7 @@ import tesla from "./company/tesla.png";
 
 import carrent from "./carrent.mp4";
 import jobit from "./jobit.mp4";
-import tripguide from "./tripguide.png";
+import tripguide from "./tripguide.mp4";
 
 export {
   logo,
