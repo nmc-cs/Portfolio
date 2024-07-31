@@ -85,17 +85,17 @@ const Hero = () => {
               <FaTwitter size={28} />
             </a>
           </div>
-          <div className="download-cv-container" style={{ marginTop: '30px' }}>
+          <div className="download-cv-container mt-6">
             <a
-              //href="https://drive.google.com/uc?export=download&id=1JoPLy_Vl9woRwT3G08YTSLz_z6Eimi6P"
-              href="https://drive.google.com/file/d/1m8C6ToLF0FP5KrB8PK0pFIOoswkbpxyu/view"
+              href="https://drive.google.com/file/d/1P1NNkRv8OOCY8TCmEbExz3eMf060kTUH/view?usp=sharing"
               target="_blank"
               download="Nitin_Chava_CV.pdf"
               rel="noopener noreferrer"
-              className="download-cv-button"
-          >
-              <FaDownload size={20} style={{ marginRight: '8px' }} />
-              Download CV
+              className="download-cv-button flex items-center space-x-2 p-2 bg-[#BA3B2A] text-white rounded-lg shadow-md hover:bg-[#a23b1f] transition-colors w-max"
+              style={{ marginLeft: '0', marginRight: 'auto' }}
+            >
+              <FaDownload size={20} />
+              <span className="text-sm sm:text-base">Download CV</span>
             </a>
           </div>
         </div>
