@@ -10,8 +10,8 @@ const Computers = ({ isMobile }) => {
     return null;
   }
 
-  const computer = useGLTF("./public/space_kid/scene.gltf");
-  const ship = useGLTF("./public/cartoon_spaceship/scene.gltf");
+  const computer = useGLTF("/space_kid/scene.gltf");
+  const ship = useGLTF("/cartoon_spaceship/scene.gltf");
 
   return (
     <mesh>
