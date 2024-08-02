@@ -87,7 +87,7 @@ const Hero = () => {
           </div>
           <div className="download-cv-container mt-6">
             <a
-              href="https://drive.google.com/file/d/1P1NNkRv8OOCY8TCmEbExz3eMf060kTUH/view?usp=sharing"
+              href="https://drive.google.com/file/d/1vjOOZrf3ySDvtyWT2gYP6pdmHk4G58hP/view?usp=sharing"
               target="_blank"
               download="Nitin_Chava_CV.pdf"
               rel="noopener noreferrer"
