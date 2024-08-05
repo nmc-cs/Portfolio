@@ -123,8 +123,9 @@ const experiences = [
     points: [
       "Developed a Dell EMC Data Domain Lab guide for CommVault using detailed API documentation and virtual server sandboxes, enabling 100+ employees to navigate setup intricacies for client projects, enhancing technical and project efficiency.",
       "Published articles on BOPLA, leveraging RESTful APIs and best practices to help understanding and technical expertise for employees",
-      "Utilized AWS Lambda, S3, EC2, and IAM for streamlined cloud backup and data management solutions using Rubrik RSC.",
-      "Automated certificate email distribution for users with Ansible Notebook, created Python Docstrings for WWT Instruqt toolkit, implemented GitHub Pages and a CICD pipeline for efficient documentation updates, and validated and tested code to ensure reliability and effectiveness.",
+      "Proposed a solution to the integration of AWS with Rubrik RSC to improve upon backup and recovery on an enterprise level.",
+      "Automated certificate email distribution for users boosting operational efficiency by 50% using Ansible Notebook.",
+      "Used Python to automate documentation through GitHub Pages for a development Instruqt toolkit.",
       "Integrated CICD pipelines, managed pull requests, conducted code reviews, performed load/stress/unit/integration testing."
     ],
   },
@@ -235,7 +236,7 @@ const projects = [
     source_code_link: "https://github.com/nmc-cs/Portfolio",
   },
   {
-    name: "Puck-Man",
+    name: "Pac-Man",
     description:
       "A group Pacman simulation game featuring all the same features of the original game but with our own fun, unique integration of sounds and gameplay. Follows all OOP principles and design patterns such as Singleton and Factory.",
     tags: [
