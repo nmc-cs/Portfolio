@@ -213,7 +213,7 @@ const projects = [
   {
     name: "Portfolio",
     description:
-      "This Page! A personal website of mine to showcase my accomplishments. Uses Framer Motion for a smooth animated experience and interactive 3D elements with Three.js and React Three Fiber all deployed on AWS cloud.",
+      "This Page! A personal website of mine to showcase my accomplishments. Built with a JavaScript foundation, I utilize Framer Motion for a smooth animated experience, Three.js for interactive 3D elements and React Three Fiber all of which is deployed on AWS cloud.",
     tags: [
       {
         name: "React",

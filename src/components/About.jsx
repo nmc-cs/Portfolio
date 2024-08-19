@@ -32,7 +32,7 @@ const TAB_DATA = [
         </li>
         <li className="flex flex-col">
           <span className="font-semibold">University of Missouri, Columbia</span>
-          <span className="text-[#BA3B2A]">BS in Computer Science, Certificate in Cyber Security | 2022 - 2025</span>
+          <span className="text-[#BA3B2A]">BS in Computer Science, Certificate in Cyber Security |  Aug 2022 - Dec 2025</span>
         </li>
       </ul>
     ),
