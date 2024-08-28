@@ -10,7 +10,7 @@ import ComputerCanvas from "./canvas/Computers";
 
 const Hero = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const roles = ["Software Developer", "Sales Engineer", "Consultant"];
+  const roles = ["Software Engineer", "Cloud Analyst", "Consultant"];
 
   useEffect(() => {
     const interval = setInterval(() => {
