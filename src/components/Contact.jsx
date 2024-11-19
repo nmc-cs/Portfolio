@@ -28,7 +28,7 @@ const Contact = () => {
     emailjs
       .send(
         "service_cnxvupv",
-        "template_matyuv8",
+        "template_uetz4pk",
         {
           from_name: form.name,
           to_name: "Nitin",
